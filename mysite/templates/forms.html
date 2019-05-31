@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{% load crispy_forms_tags %}
+{{ titulo }}<br>
+<!--{{ request.user }}-->
+<hr>
+<br>
+{% block content%}
+<div class="row">
+    <div class="col-sm-6 col-sm4">
+<div class="content" style="margin-left: 10%">
+    {% if titulo %}
+    <h1>{{ titulo }}</h1>
+    {% endif%}
+<form method="POST" action="">{% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="Enviar mensaje"/>
+</form>
+</div>
+    </div>
+</div>
+{% endblock %}

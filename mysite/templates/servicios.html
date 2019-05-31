@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content%}
+<p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Reparación de celulares</a>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Reparación de computadores</button>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Reparación de tablets</button>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample3">Reparación de audifonos</button>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample3">Reparación de parlantes</button>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample3">Reparación de camara</button>
+</p>
+    <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+                <img src="{% static 'img/celular.jpg' %}" height="250px" width="200px" class="d-block w-200" alt="celular">            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+                <img src="{% static 'img/computadora.jpg' %}" height="250px" width="200px" class="d-block w-200" alt="computadora">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body">
+                    <img src="{% static 'img/tablet.jpg' %}" height="250px" width="200px" class="d-block w-200" alt="tablet">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample4">
+                <div class="card card-body">
+                    <img src="{% static 'img/audifonos.jpg' %}" height="250px" width="200px" class="d-block w-200" alt="audifonos">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample5">
+                <div class="card card-body">
+                    <img src="{% static 'img/parlantes.jpg' %}" height="250px" width="200px" class="d-block w-200" alt="parlantes">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample6">
+                    <div class="card card-body">
+                        <img src="{% static 'img/camara.jpg' %}" height="250px" width="200px" class="d-block w-200" alt="camara">
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+<script>
+    $('.collapse').collapse()
+</script>
